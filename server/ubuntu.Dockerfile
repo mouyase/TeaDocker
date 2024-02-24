@@ -19,7 +19,7 @@ RUN	apt-get update && apt-get upgrade -qqy \
     && tar -xzf /ts/TeaSpeak.tar.gz -C /ts \
     && rm /ts/TeaSpeak.tar.gz \
     && echo "" > /ts/config/config.yml && ln -sf /ts/config/config.yml /ts/config.yml \
-    && wget -nv -O /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl \
+    && wget -nv -O /usr/local/bin/youtube-dl https://github.com/ytdl-org/youtube-dl/releases/download/2021.12.17/youtube-dl \
     && chmod a+rx /usr/local/bin/youtube-dl \
     \
     && groupadd -g ${gid} teaspeak \
